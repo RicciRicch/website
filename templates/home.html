@@ -1,0 +1,13 @@
+{% extends "base.html" %} {%block title%} Home {% endblock %} 
+{% block content%}
+<div class="text-center">
+  <h1 class="display-4">Dobrodosli u Naj...Naj!</h1>
+  <p class="lead">Najbolje i najukusnije palacinke u gradu 🥞</p>
+  <img
+    src="{{ url_for('static', filename='img/pancake-hero.jpg') }}"
+    class="img-fluid rounded my-4"
+    alt="Pancakes"
+  />
+  <a href="/menu" class="btn btn-primary btn-lg">Pogledaj Menu</a>
+</div>
+{% endblock %}

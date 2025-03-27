@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block title %}Menu{% endblock %} {% block content
+%}
+<h1 class="text-center mb-5">Our Pancake Menu</h1>
+
+<div class="row">
+  <!-- Pancake Item 1 -->
+  <div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="{{ url_for('static', filename='img/classic-pancake.jpg') }}"
+        class="card-img-top"
+        alt="Classic Pancake"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Classic Pancake</h5>
+        <p class="card-text">Fluffy buttermilk pancakes with maple syrup.</p>
+        <p class="fw-bold">$5.99</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pancake Item 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="{{ url_for('static', filename='img/chocolate-pancake.jpg') }}"
+        class="card-img-top"
+        alt="Chocolate Pancake"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Chocolate Pancake</h5>
+        <p class="card-text">Rich chocolate pancakes with whipped cream.</p>
+        <p class="fw-bold">$7.99</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pancake Item 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="{{ url_for('static', filename='img/blueberry-pancake.jpg') }}"
+        class="card-img-top"
+        alt="Blueberry Pancake"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Blueberry Pancake</h5>
+        <p class="card-text">Fresh blueberries in every bite.</p>
+        <p class="fw-bold">$6.99</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

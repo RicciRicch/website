@@ -1,0 +1,42 @@
+:root {
+  --bs-primary: #ff40ff;
+  --bs-primary-rgb: 255, 105, 180;
+}
+.btn-primary,
+.bg-primary,
+.text-primary,
+.alert-primary {
+  --bs-btn-bg: #ff40ff;
+  --bs-btn-border-color: #ff40ff;
+  --bs-btn-hover-bg: #ff40ff;
+  --bs-btn-hover-border-color: #ff40ff;
+}
+
+:root {
+  --bs-secondary: #6cb2eb;
+  --bs-secondary-rgb: 108, 178, 235;
+}
+
+.btn-secondary,
+.bg-secondary,
+.text-secondary,
+.alert-secondary {
+  --bs-btn-bg: #6cb2eb;
+  --bs-btn-border-color: #6cb2eb;
+  --bs-btn-hover-bg: #4fa1e8;
+  --bs-btn-hover-border-color: #3a97e5;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* Ovim se glavni sadržaj širi, a footer ide na dno */
+}
+
