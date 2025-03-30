@@ -1,19 +1,122 @@
-{% extends "base.html" %} {% block title %}Contact Us{% endblock %} {% block
+{% extends "base.html" %} {% block title %}Kontakt{% endblock %} {% block
 content %}
-<h1 class="mb-4">Contact Us</h1>
-<form>
-  <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" required />
+<h1 class="text-center mb-3 mt-5">Savet ili pitanje? Kontakiraj nas <span><i class="bi bi-envelope-fill"></i></span></h1>
+<section>
+  <div class="container d-flex justify-content-center align-items-center my-5">
+    <form action="" class="w-50">
+      <div class="mb-3">
+        <label for="ime" class="form-label">Ime</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ime">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mesage</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <!-- Dugme za slanje -->
+      <button type="submit" class="btn btn-dark w-100">Pošalji</button>
+    </form>
   </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" required />
+</section>
+<!-- Question Accordion -->
+<section class="p-5" id="questions">
+  <div class="container">
+      <h1 class="text-center fw-bold mb-4">FAQ - Cesta pitanja <span><i class="bi bi-question-circle-fill"></i></span></h1>
+      
+      <div class="accordion accordion-flush mt-5" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#question-one" aria-expanded="false" aria-controls="question-one">
+                  Gde se tacno nalazite?
+              </button>
+            </h2>
+            <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">
+              <div class="accordion-body">Nalazimo se na adresi [unesite adresu], u blizini [neki orijentir, npr. trga, poznate ulice]. Pogledajte našu mapu na kontakt stranici! </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#question-two" aria-expanded="false" aria-controls="question-two">
+                  Koje vrste palačinki imate u ponudi?
+                </button>
+              </h2>
+              <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">Nudimo slatke i slane palačinke, američke i klasične, kao i specijalne sezonske ukuse. Pogledajte naš meni za detalje.</div>
+              </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#question-three" aria-expanded="false" aria-controls="question-three">
+                  Da li nudite franšizu ili saradnju sa drugim lokalima?
+                </button>
+              </h2>
+              <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">Zainteresovani smo za širenje brenda kroz franšizu! Ako ste zainteresovani, kontaktirajte nas na [email] za više informacija. </div>
+              </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#question-four" aria-expanded="false" aria-controls="question-four">
+                  Da li imate opciju sedenja na otvorenom?
+                </button>
+              </h2>
+              <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">Da, imamo baštu sa [broj] mesta, idealnu za uživanje u toplim danima!</div>
+              </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#question-five" aria-expanded="false" aria-controls="question-five">
+                  Da li je moguće poručiti veće količine palačinki unapred?
+                </button>
+              </h2>
+              <div id="question-five" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">Da, za porudžbine većih količina molimo vas da nas kontaktirate najmanje 24h unapred. </div>
+              </div>
+          </div>
+        </div>
   </div>
-  <div class="mb-3">
-    <label for="message" class="form-label">Message</label>
-    <textarea class="form-control" id="message" rows="3"></textarea>
+</section>
+<section class="mb-5">
+  <div class="container">
+    <h1 class="my-5 fw-bold text-center">Gde se nalazimo? <span><i class="bi bi-map-fill"></i></span></h1>
+    <div class="row g-5 align-items-center">
+      
+      <!-- Leva kolona - Google mapa -->
+      <div class="col-md-8 text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d709.9521955810313!2d21.184200669670492!3d44.62138435274212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4750ef0c49c2b517%3A0x49fd458f78c2880f!2z0JvQtdGa0LjQvdC-0LLQsCAxLCDQn9C-0LbQsNGA0LXQstCw0YY!5e0!3m2!1ssr!2srs!4v1743253536596!5m2!1ssr!2srs" 
+            width="100%" 
+            height="400" 
+            style="border-radius: 10px; border: 2px solid #000;"
+            allowfullscreen=""
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Desna kolona - Tekst sa lokacijom -->
+      <div class="border border-2 border-dark rounded-3 col-md-4 text-start">
+        <div class="p-3">
+          <h4>Adresa: <span class="fw-bolder ms-2 text-light">Lenjinova 1 <i class="bi bi-geo-alt-fill"></i></span></h4>
+          <h4>Grad: <span class="fw-bolder ms-2 text-light">Pozarevac <i class="bi bi-buildings-fill"></i></span></h4>
+          <h4>Telefon: <span class="fw-bolder ms-2 text-light">+012223012 <i class="bi bi-telephone-fill"></i></span></h4>
+          <h4>Email: <span class="fw-bolder ms-2 text-light"><a href="mailto:najnaj@gmail.com" class="text-white">najnaj@gmail.com <i class="bi bi-envelope-fill"></i></a></span></h4>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <button type="submit" class="btn btn-primary">Send</button>
-</form>
+</section>
+
+
 {% endblock %}

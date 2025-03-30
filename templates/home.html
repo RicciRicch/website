@@ -1,13 +1,169 @@
 {% extends "base.html" %} {%block title%} Home {% endblock %} 
 {% block content%}
-<div class="text-center">
-  <h1 class="display-4">Dobrodosli u Naj...Naj!</h1>
-  <p class="lead">Najbolje i najukusnije palacinke u gradu 🥞</p>
-  <img
-    src="{{ url_for('static', filename='img/pancake-hero.jpg') }}"
-    class="img-fluid rounded my-4"
-    alt="Pancakes"
-  />
-  <a href="/menu" class="btn btn-primary btn-lg">Pogledaj Menu</a>
-</div>
+<!-- Slike -->
+<section>
+  <div class="w-100 h-50"> <!-- Omotač koji zauzima 50% visine ekrana -->
+    <div id="myCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+      
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active">
+          <img src="{{url_for('static', filename='img/palacinka.jpg')}}" class="d-block w-100 carousel-img" alt="Pancake">
+          <div class="carousel-caption">
+            <h1 class="text-dark">Slatke Palacinke</h1>
+            <p class="h3">Ne znas ako nisi probao!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='img/vafl.jpg')}}" class="d-block w-100 carousel-img" alt="Wafl">
+          <div class="carousel-caption">
+            <h1 class="text-dark">Wafli</h1>
+            <p class="h3">Zavisnost je jasna!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='img/milkshake.avif')}}" class="d-block w-100 carousel-img img" alt="Milkshake">
+          <div class="carousel-caption">
+            <h1 class="text-dark">Milksejkovi</h1>
+            <p class="h3">Osvezenje uz neprocenjiv ukus!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='img/slana.jpg')}}" class="d-block w-100 carousel-img" alt="Slana">
+          <div class="carousel-caption">
+            <h1 class="text-dark">Slane Palacinke</h1>
+            <p class="h3">Da li jos uvek verujes da savrsenstvo ne postoji?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-fluid text-center bg-primary text-white w-100 mb-5 mt-0 py-5">
+    <h3 class="">"Svaka dobra hrana priča svoju priču – neka to bude tvoja priča, puna ukusa, ljubavi i strasti."</h3>
+    <a href="{{url_for('proizvodi')}}">Proizvodi</a>
+  </div>
+</section>
+<h1 class="ms-5 my-5">NAJPOPULARNIJI</h1>
+<!-- Cards najpopularniji -->
+<section>
+  <div class="container-fluid px-5">
+    <div class="card mb-5 w-100" style="min-height: 400px;">
+      <div class="row g-5 align-items-center">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="{{url_for('static',filename='img/palacinke.png')}}" class="img-fluid rounded-start w-100" style="max-height: 100%; object-fit: cover;" alt="Slatka palacinka">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-5 mt-0 fw-bold">SLATKA PALACINKA <span class="badge text-bg-warning">Popularno</span></h2>
+            <p class="card-text fw-light lead">„Slatke palačinke su više od običnog deserta; one su čarolija na tanjiru. Svaka palačinka je poput malog platna, nežno prekrivenog slojem kremaste čokolade, voća, ili slatkog namaza, a svaki zalogaj budi uspomene na detinjstvo i mirise iz bake. Sa svaki slojem posute prahom plazme, one donose savršen spoj hrskavosti i mekoće. Jedna palačinka nije dovoljna, jer znaš da ti srce želi još jedan zalogaj te neodoljive slatke magije</p>
+            <div class="text-center"><a href="#" class="btn btn-dark mt-5">Pogledaj</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-5 w-100" style="min-height: 400px;">
+      <div class="row g-5 align-items-center">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="{{url_for('static',filename='img/hotdog.png')}}" class="img-fluid rounded-start w-100" style="max-height: 100%; object-fit: cover;" alt="Hot dog">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-5 mt-0 fw-bold">HOT DOG - VRUCI PAS <span class="badge text-bg-warning">Popularno</span></h2>
+            <p class="card-text fw-light lead">„Hot dog je jednostavan, ali savršen spoj ukusa koji osvajaju srca širom sveta. Sočna kobasica u mekom pecivu postaje prava zvezda svakog obroka, a bogatstvo dodataka – senf, kečap, majonez, kiseli krastavci ili luk – čini svaki zalogaj nezaboravnim. U svojoj jednostavnosti, hot dog nosi snagu komfora, stresa u svakom pokretu, i ukus koji je uvek isti, a opet svaki put ima nešto novo. Hot dog je više od jela; to je trenutak uživanja i nostalgije na svakom koraku.</p>
+            <div class="text-center"><a href="#" class="btn btn-dark mt-5">Pogledaj</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-5 w-100" style="min-height: 400px;">
+      <div class="row g-5 align-items-center">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="{{url_for('static',filename='img/bubble.png')}}" class="img-fluid rounded-start w-100" style="max-height: 100%; object-fit: cover;" alt="Bubble">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-5 mt-0 fw-bold">BUBBLE WAFL <span class="badge text-bg-warning">Popularno</span></h2>
+            <p class="card-text fw-light lead">„Bubble vafl je pravi vizuelni i ukusni spektakl. Sa svojom jedinstvenom mehurićastom strukturom, svaki zalogaj pruža savršen spoj hrskavosti spolja i mekoće iznutra. Ovaj vafl nije samo desert – to je uživanje koje oduševljava sva čula. Bilo da je preliven čokoladom, voćem ili kremom, bubble vafl je poslastica koja unosi radost u svaki trenutak</p>
+            <div class="text-center"><a href="#" class="btn btn-dark mt-5">Pogledaj</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-5 w-100" style="min-height: 400px;">
+      <div class="row g-5 align-items-center">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="{{url_for('static',filename='img/topla-cokolada.png')}}" class="img-fluid rounded-start w-100" style="max-height: 100%; object-fit: cover;" alt="Topla cokolada">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-5 mt-0 fw-bold">TOPLA COKOLADA <span class="badge text-bg-warning">Popularno</span></h2>
+            <p class="card-text fw-light lead">„Topla čokolada je kao zagrljaj u šolji – bogata, kremasta i utešna. Svaki gutljaj donosi osećaj topline, dok intenzivan, gorko-sladak ukus čokolade preplavljuje sva čula. Idealna za hladne zimske dane, pruža osećaj opuštanja i uživanja, podsećajući nas na male radosti života.</p>
+            <div class="text-center"><a href="#" class="btn btn-dark mt-5">Pogledaj</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<section class="p-5 bg-dark text-light">
+  <div class="container">
+      <div class="row g-5 align-items-center justify-content-between">
+          <div class="col-md p-5">
+              <h2 class="text-light mb-5">Savršenstvo u Svakom Zalogaju</h2>
+              <p class="lead">U našoj palačinkarnici, kvalitet nije samo reč – to je naša strast. Svaka palačinka koju pravimo nosi ljubav, pažljivo odabrane sastojke i želju da vas iznova oduševimo. Verujemo da svaki zalogaj treba da bude savršen, a naš cilj je da vam pružimo nezaboravno iskustvo sa svakim gutljajem zadovoljstva. Jer zaslužujete samo najbolje, a mi se trudimo da to i pružimo!</p>
+              <a href="#" class="btn btn-light mt-3">
+                  <i class="bi bi-chevron-right"></i>
+                  Saznaj o nama
+              </a>
+          </div>
+          <div class="col-md">
+              <img src="{{url_for('static',filename='img/spremanje.jpg')}}" class="img-fluid rounded-5" alt="Spremanje">
+          </div>
+      </div>
+  </div>
+</section>
+<section class="p-5 bg-secondary text-black">
+  <div class="container-fluid p-5">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-md">
+            <img src="{{url_for('static',filename='img/kvalitet1.png')}}" class="img-fluid w-90" alt="Kvalitet">
+        </div>
+        <div class="col-md p-5">
+            <h2 class="mb-5">Kvalitet na prvom mestu #1</h2>
+            <p class="lead">U našoj palačinkarnici, najvažniji cilj nam je pružiti vam ne samo ukusan, već i nezaboravan doživljaj. Zato težimo najboljem kvalitetu u svakom segmentu – od pažljivo biranih sastojaka, preko ljubavi koju unosimo u svaki recept, do perfektnog servisa. Verujemo da su mali detalji ti koji čine razliku, i da je kvalitet ključ svega. Naše palačinke nisu samo hrskave i mekane – one su izrađene od najfinijih, prirodnih sastojaka, tako da svaki zalogaj bude pravo zadovoljstvo za vaše čulo ukusa. Naša misija je da vam pružimo najbolje, jer zaslužujete samo najbolje.</p>
+            <a href="#" class="btn btn-dark mt-3">
+                <i class="bi bi-chevron-right"></i>
+                Pogledaj proizvode
+            </a>
+        </div>
+    </div>
+  </div>
+</section>
+
+
 {% endblock %}
