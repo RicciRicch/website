@@ -61,6 +61,18 @@ body {
   font-size: x-large;
 }
 
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 350px; /* ili bilo koja vrednost koju želiš */
+}
+
+.custom-card .card-body {
+  flex-grow: 1;
+}
+
+
+
 
 
 

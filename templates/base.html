@@ -58,7 +58,7 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container-fluid px-5">{% block content %}{% endblock %}</div>
+    <div class="container-fluid px-0">{% block content %}{% endblock %}</div>
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center py-3 position-relative mt-5">
@@ -90,7 +90,7 @@
               
               <!-- Logo i tekst - Centar -->
               <div class="col-md-4 text-center lead fs-5">
-                  <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="mb-3" style="max-width: 200px;">
+                  <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="mb-3" style="max-width: 200px !important;">
                   <p>&copy; 2025 Naj...Naj Palacinkarnica</p>
                   <p>Lenjinova 1, Požarevac</p>
                   <p>Email: <a href="mailto:najnaj@gmail.com" class="text-white">najnaj@gmail.com</a></p>
