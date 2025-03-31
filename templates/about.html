@@ -1,19 +1,60 @@
 {% extends "base.html" %} {% block title %}About Us{% endblock %} {% block
 content %}
-<div class="row">
-  <div class="col-md-6">
-    <h1>About Fluffy Pancakes</h1>
-    <p>
-      We’ve been serving the fluffiest pancakes since 2010. Our secret? A family
-      recipe passed down for generations.
-    </p>
-  </div>
-  <div class="col-md-6">
-    <img
-      src="{{ url_for('static', filename='img/chef.jpg') }}"
-      class="img-fluid rounded"
-      alt="Our Chef"
-    />
-  </div>
-</div>
+<link href="/static/css/output.css" rel="stylesheet">
+<body class="tw:m-0 tw:p-0 tw:overflow-x-hidden tw:font-primary">
+  <header class="tw:mb-12">
+    <div class="tw:flex tw:justify-center tw:text-center tw:flex-col tw:space-y-0"><!--MAIN TEXT-->
+      <span class="tw:font-bold tw:text-5xl ">SVE STO TREBA</span>
+      <span class="tw:font-bold tw:text-white tw:text-7xl">DA ZNAS</span>
+      <span class="tw:font-bold tw:text-5xl ">O NAMA</span>
+    </div>
+  </header>
+
+  <section class="tw:p-0 tw:m-0">
+    <div class="tw:w-full tw:h-100 tw:lg:h-200 tw:relative tw:flex tw:items-center tw:justify-center tw:overflow-hidden">
+
+      <button id="prev" class="tw:absolute tw:top-1/2 tw:-translate-y-1/2 tw:left-3 tw:z-10 tw:bg-gray-400/60 tw:text-white tw:w-8 tw:lg:w-16 tw:h-24 tw:lg:h-48 tw:hover:bg-pink-300 tw:hover:opacity-40">
+        ❮
+      </button>
+      <button id="next" class="tw:absolute tw:top-1/2 tw:-translate-y-1/2 tw:right-3 tw:z-10 tw:bg-gray-400/60 tw:text-white tw:w-8 tw:lg:w-16 tw:h-24 tw:lg:h-48  tw:hover:bg-pink-300 tw:hover:opacity-40">
+        ❯
+      </button>
+
+      <ul class="tw:list-none">
+        <li class="tw:absolute tw:inset-0 tw:opacity-100  tw:transition-opacity tw:duration-500">
+          <img class="tw:block tw:w-full tw:h-full tw:object-cover tw:object-center" src="/static/img/slika4.png" alt="">
+        </li>
+        <li class="tw:absolute tw:inset-0 tw:opacity-0  tw:transition-opacity tw:duration-500">
+          <img class="tw:block tw:w-full tw:h-full tw:object-cover tw:object-center" src="/static/img/slika2.png" alt="">
+        </li>
+        <li class="tw:absolute tw:inset-0 tw:opacity-0  tw:transition-opacity tw:duration-500">
+          <img class="tw:block tw:w-full tw:h-full tw:object-cover tw:object-center" src="/static/img/slika3.png" alt="">
+        </li>
+        <li class="tw:absolute tw:inset-0 tw:opacity-0  tw:transition-opacity tw:duration-500">
+          <img class="tw:block tw:w-full tw:h-full tw:object-cover tw:object-center" src="/static/img/slika1.png" alt="">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tw:mt-8">
+    <div class="tw:tracking-widest"> 
+      <div class="tw:mb-20">
+        <p class="tw:text-3xl tw:font-semibold tw:md:text-5xl tw:lg:font-bold tw:text-center">Dobrodošli u 
+          <span class="tw:text-white tw:font-semibold ">Naj...Naj</span>, omiljeno mesto za sve ljubitelje slatkih i slanih poslastica u samom srcu <span class="tw:text-white tw:font-semibold tw:underline">Požarevca</span>!</p>
+      </div>
+      <div class="tw:mt-20 tw:text-xl">
+        <p>Nalazimo se u centru grada i svakog dana za vas pripremamo najukusnije palačinke, sladolede, sendviče i milkšejkove. Bilo da ste raspoloženi za nešto slatko ili slano, kod nas ćete pronaći savršen uzitak koji će vas osvojiti već na prvi zalogaj.</p>
+      </div>
+      <div class="tw:mt-20 tw:text-xl">
+        <p >U Naj...Naj verujemo da je kvalitet na prvom mestu – koristimo samo najbolje sastojke kako bismo vam pružili nezaboravno gastronomsko iskustvo. Naše palačinke su mekane i savršeno nadevene, sladoledi kremasti i osvežavajući, sendviči bogati i puni ukusa, a milkšejkovi pravo zadovoljstvo u čaši.</p>
+      </div>
+      <div class="tw:mt-20 tw:text-xl">
+        <p>Dođite i uverite se zašto smo Naj...Naj mesto za uživanje u poslasticama u Požarevcu!</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script src="/static/about.js"></script>
 {% endblock %}

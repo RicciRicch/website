@@ -1,54 +1,69 @@
 {% extends "base.html" %} {% block title %}Menu{% endblock %} {% block content
 %}
-<h1 class="text-center mb-5">Our Pancake Menu</h1>
+<link href="/static/css/output.css" rel="stylesheet">
 
-<div class="row">
-  <!-- Pancake Item 1 -->
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img
-        src="{{ url_for('static', filename='img/classic-pancake.jpg') }}"
-        class="card-img-top"
-        alt="Classic Pancake"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Classic Pancake</h5>
-        <p class="card-text">Fluffy buttermilk pancakes with maple syrup.</p>
-        <p class="fw-bold">$5.99</p>
+<header class="tw:font-primary">
+  <div class="tw:flex tw:justify-center tw:text-center tw:flex-col tw:space-y-0"><!--MAIN TEXT-->
+    <span class="tw:font-bold tw:text-5xl ">IZABERI</span>
+    <span class="tw:font-bold tw:text-gray-500 tw:text-7xl">HRANU</span>
+    <span class="tw:font-bold tw:text-5xl ">ZA SEBE</span>
+  </div>
+</header>
+
+<main class= "">
+  <div class="tw:mt-20 "><!--FOR CARDS-->
+    <!--PRVA KARTICA-->
+    <div class="tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:ease-linear tw:duration-400 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6 tw:group"><!--CARD-->
+      <div>
+        <img class="tw:mx-0" src="/static/img/statka.png" alt="slatka palacinka">
+      </div>
+      <div class="tw:flex tw:flex-col tw:items-center">
+        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+        <p>kratak opis</p>
+        <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
+          <a href="">POGLEDAJ PONUDU</a>
+        </div>
+      </div>
+    </div>
+    <!--DRUGA KARTICA-->
+    <div class=" tw:group tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6"><!--CARD-->
+      <div class="tw:md:order-2">
+        <img class="tw:mx-0 tw:mb-4" src="/static/img/slana.png" alt="slana palacinka">
+      </div>
+      <div class="tw:order-1 tw:flex tw:flex-col tw:items-center">
+        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+        <p>kratak opis</p>
+        <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2">
+          <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
+        </div>
+      </div>
+    </div>
+    <!--TRECA KARTICA-->
+    <div class="tw:group tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6"><!--CARD-->
+      <div>
+        <img class="tw:mx-0" src="/static/img/wafle.png" alt="wafle">
+      </div>
+      <div class="tw:flex tw:flex-col tw:items-center">
+        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+        <p>kratak opis</p>
+        <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
+          <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
+        </div>
+      </div>
+    </div>
+  <!--CETVRTA KARTICA-->
+    <div class="tw:group tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:lg:rounded-r-full tw:rounded-3xl tw:lg:rounded-l-full tw:py-3"><!--CARD-->
+      <div class="tw:md:order-2">
+        <img class="tw:mx-0" src="/static/img/statka.png" alt="slatka palacinka">
+      </div>
+      <div class="tw:order-1 tw:flex tw:flex-col tw:items-center">
+        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+        <p>kratak opis</p>
+        <div class="tw:flex tw:w-fit tw:group-hover:w-full  tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
+          <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
+        </div>
       </div>
     </div>
   </div>
-
-  <!-- Pancake Item 2 -->
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img
-        src="{{ url_for('static', filename='img/chocolate-pancake.jpg') }}"
-        class="card-img-top"
-        alt="Chocolate Pancake"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Chocolate Pancake</h5>
-        <p class="card-text">Rich chocolate pancakes with whipped cream.</p>
-        <p class="fw-bold">$7.99</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Pancake Item 3 -->
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img
-        src="{{ url_for('static', filename='img/blueberry-pancake.jpg') }}"
-        class="card-img-top"
-        alt="Blueberry Pancake"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Blueberry Pancake</h5>
-        <p class="card-text">Fresh blueberries in every bite.</p>
-        <p class="fw-bold">$6.99</p>
-      </div>
-    </div>
-  </div>
-</div>
+</main>
 {% endblock %}

@@ -43,13 +43,13 @@
           <div
             class="navbar-nav d-flex w-100 justify-content-around fw-bold lead"
           >
-            <a class="nav-link text-light" href="{{url_for('menu')}}"
+            <a class=" nav-link text-white" href="{{url_for('menu')}}"
               >Proizvodi</a
             >
-            <a class="nav-link text-light" href="{{url_for('about')}}"
+            <a class="nav-link text-white" href="{{url_for('about')}}"
               >O nama</a
             >
-            <a class="nav-link text-light" href="{{url_for('contact')}}"
+            <a class="nav-link text-white" href="{{url_for('contact')}}"
               >Kontakt</a
             >
           </div>
@@ -58,7 +58,7 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container my-5">{% block content %}{% endblock %}</div>
+    <div class="container-fluid px-5">{% block content %}{% endblock %}</div>
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center py-3 position-relative">
