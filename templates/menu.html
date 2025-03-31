@@ -2,68 +2,83 @@
 %}
 <link href="/static/css/output.css" rel="stylesheet">
 
-<header class="tw:font-primary mt-5">
+<header class="tw:font-primary">
   <div class="tw:flex tw:justify-center tw:text-center tw:flex-col tw:space-y-0"><!--MAIN TEXT-->
     <span class="tw:font-bold tw:text-5xl ">IZABERI</span>
     <span class="tw:font-bold tw:text-gray-500 tw:text-7xl">HRANU</span>
     <span class="tw:font-bold tw:text-5xl ">ZA SEBE</span>
   </div>
 </header>
-
-<main class= "">
-  <div class="tw:mt-20 "><!--FOR CARDS-->
-    <!--PRVA KARTICA-->
-    <div class="tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:ease-linear tw:duration-400 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6 tw:group"><!--CARD-->
-      <div>
-        <img class="tw:mx-0" src="/static/img/statka.png" alt="slatka palacinka">
+<main>
+  <section class="tw:mb-30 tw:p-12"><!--Upper blur-->
+    <div>
+      <div class="tw:absolute tw:left-0 tw:w-1/2 tw:h-24 tw:bg-pink-500 tw:rounded-full tw:opacity-50 tw:blur-xl"></div>
+      <div class="tw:absolute tw:right-0 tw:w-1/2 tw:h-24 tw:bg-yellow-500 tw:rounded-full tw:opacity-50 tw:blur-xl"></div>
+    </div>
+  </section>
+  <div class="tw:relative ">
+    <div class="tw:absolute tw:right-0 tw:hidden tw:md:block tw:w-10 tw:lg:w-24 tw:h-full tw:bg-pink-500 tw:rounded-full tw:opacity-50 tw:blur-xl"></div>
+    <div class="tw:absolute tw:left-0 tw:hidden tw:md:block tw:w-10 tw:lg:w-24 tw:h-full tw:bg-yellow-500 tw:rounded-full tw:opacity-50 tw:blur-xl"></div>
+    <div class="tw:mt-20 tw:flex tw:flex-col tw:items-center"><!--FOR CARDS-->
+      <!--PRVA KARTICA-->
+      <div class="tw:flex tw:flex-col tw:lg:w-250 tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:ease-linear tw:duration-400 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6 tw:group"><!--CARD-->
+        <div>
+          <img class="tw:mx-0" src="/static/img/statka.png" alt="slatka palacinka">
+        </div>
+        <div class="tw:flex tw:flex-col tw:items-center">
+          <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+          <p>kratak opis</p>
+          <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
+            <a href="">POGLEDAJ PONUDU</a>
+          </div>
+        </div>
       </div>
-      <div class="tw:flex tw:flex-col tw:items-center">
-        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
-        <p>kratak opis</p>
-        <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
-          <a href="">POGLEDAJ PONUDU</a>
+      <!--DRUGA KARTICA-->
+      <div class=" tw:group tw:flex tw:lg:w-250 tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6"><!--CARD-->
+        <div class="tw:md:order-2">
+          <img class="tw:mx-0 tw:mb-4" src="/static/img/slana.png" alt="slana palacinka">
+        </div>
+        <div class="tw:order-1 tw:flex tw:flex-col tw:items-center">
+          <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+          <p>kratak opis</p>
+          <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2">
+            <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
+          </div>
+        </div>
+      </div>
+      <!--TRECA KARTICA-->
+      <div class="tw:group tw:flex tw:lg:w-250 tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6"><!--CARD-->
+        <div>
+          <img class="tw:mx-0" src="/static/img/wafle.png" alt="wafle">
+        </div>
+        <div class="tw:flex tw:flex-col tw:items-center">
+          <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+          <p>kratak opis</p>
+          <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
+            <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
+          </div>
+        </div>
+      </div>
+    <!--CETVRTA KARTICA-->
+      <div class="tw:group tw:flex tw:lg:w-250 tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:lg:rounded-r-full tw:rounded-3xl tw:lg:rounded-l-full tw:py-3"><!--CARD-->
+        <div class="tw:md:order-2">
+          <img class="tw:mx-0" src="/static/img/statka.png" alt="slatka palacinka">
+        </div>
+        <div class="tw:order-1 tw:flex tw:flex-col tw:items-center">
+          <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
+          <p>kratak opis</p>
+          <div class="tw:flex tw:w-fit tw:group-hover:w-full  tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
+            <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
+          </div>
         </div>
       </div>
     </div>
-    <!--DRUGA KARTICA-->
-    <div class=" tw:group tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6"><!--CARD-->
-      <div class="tw:md:order-2">
-        <img class="tw:mx-0 tw:mb-4" src="/static/img/slana.png" alt="slana palacinka">
-      </div>
-      <div class="tw:order-1 tw:flex tw:flex-col tw:items-center">
-        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
-        <p>kratak opis</p>
-        <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2">
-          <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
-        </div>
-      </div>
-    </div>
-    <!--TRECA KARTICA-->
-    <div class="tw:group tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:rounded-3xl tw:lg:rounded-r-full tw:lg:rounded-l-full tw:py-3 tw:mb-6"><!--CARD-->
-      <div>
-        <img class="tw:mx-0" src="/static/img/wafle.png" alt="wafle">
-      </div>
-      <div class="tw:flex tw:flex-col tw:items-center">
-        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
-        <p>kratak opis</p>
-        <div class="tw:flex tw:w-fit tw:group-hover:w-full tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
-          <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
-        </div>
-      </div>
-    </div>
-  <!--CETVRTA KARTICA-->
-    <div class="tw:group tw:flex tw:flex-col tw:md:flex-row tw:items-center tw:justify-around tw:hover:bg-gray-300 tw:hover:border tw:duration-150 tw:lg:rounded-r-full tw:rounded-3xl tw:lg:rounded-l-full tw:py-3"><!--CARD-->
-      <div class="tw:md:order-2">
-        <img class="tw:mx-0" src="/static/img/statka.png" alt="slatka palacinka">
-      </div>
-      <div class="tw:order-1 tw:flex tw:flex-col tw:items-center">
-        <p class="tw:font-bold tw:text-6xl">CATEGORY 1</p>
-        <p>kratak opis</p>
-        <div class="tw:flex tw:w-fit tw:group-hover:w-full  tw:group-hover:justify-center  tw:hover:bg-pink-300 tw:transition-all tw:duration-500 tw:ease-in-out tw:group-hover:scale-95 tw:border tw:rounded-3xl tw:py-2 tw:px-2 ">
-          <a class="tw:sm:text-center" href="">POGLEDAJ PONUDU</a>
-        </div>
-      </div>
-    </div>
+</div>
+<section class="tw:mb-30 tw:p-12"><!--Upper blur-->
+  <div>
+    <div class="tw:absolute tw:left-0 tw:w-1/2 tw:h-24 tw:bg-pink-500 tw:rounded-full tw:opacity-50 tw:blur-xl"></div>
+    <div class="tw:absolute tw:right-0 tw:w-1/2 tw:h-24 tw:bg-yellow-500 tw:rounded-full tw:opacity-50 tw:blur-xl"></div>
   </div>
+</section>
 </main>
 {% endblock %}

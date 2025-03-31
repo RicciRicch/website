@@ -1,9 +1,10 @@
 {% extends "base.html" %} {%block title%} Home {% endblock %} 
 {% block content%}
+<link href="/static/css/output.css" rel="stylesheet">
 <!-- Slike -->
 <section>
   <div class="w-100 h-50"> <!-- Omotač koji zauzima 50% visine ekrana -->
-    <div id="myCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+    <div id="myCarousel" class="carousel slide tw:h-150 tw:md:h-210" data-bs-ride="carousel">
       
       <!-- Indicators -->
       <div class="carousel-indicators">
@@ -59,8 +60,8 @@
   </div>
 </section>
 <section>
-  <div class="container-fluid text-center bg-primary text-white w-100 mb-5 mt-0 py-5">
-    <h3 class="">"Svaka dobra hrana priča svoju priču – neka to bude tvoja priča, puna ukusa, ljubavi i strasti."</h3>
+  <div class="container-fluid text-center bg-primary text-white tw:h-fit w-100 mb-5 mt-0 py-5">
+    <p class="tw:font-semibold tw:text-md tw:md:text-2xl">"Svaka dobra hrana priča svoju priču – neka to bude tvoja priča, puna ukusa, ljubavi i strasti."</p>
     <a href="{{url_for('proizvodi')}}">Proizvodi</a>
   </div>
 </section>
