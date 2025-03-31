@@ -18,5 +18,9 @@ def about():
 def contact():
     return render_template("contact.html")
 
+@app.route("/proizvodi")
+def proizvodi():
+    return render_template("proizvodi.html")
+
 if __name__ == '__main__':
     app.run(debug=True)

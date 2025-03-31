@@ -40,3 +40,28 @@ body {
   flex: 1; /* Ovim se glavni sadržaj širi, a footer ide na dno */
 }
 
+.carousel-img {
+  height: 90vh;
+  object-fit: cover; /* Sprečava razvlačenje i prilagođava sliku */
+}
+
+.card:hover {
+  background-color: #808080; /* Siva boja pozadine */
+  border: 2px solid #000; /* Crni okvir */
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Ugladjen prelaz */
+}
+
+.card:hover .card-title {
+  color: #fff; /* Bele boje za naslov */
+}
+
+.card:hover .card-text {
+  color: black;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+
+
+
+
