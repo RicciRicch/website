@@ -18,7 +18,7 @@
         </div>
         <!--Links-->
         <div id="navmenu" class=" absolute top-0 left-[-100%]  flex justify-center items-center min-h-[80vh] gap-3 w-full
-        bg-pink-500/60 backdrop-blur-md duration-300 overflow-hidden lg:static lg:bg-transparent lg:min-h-fit lg:w-auto lg:ml-10">
+        bg-pink-500/60 backdrop-blur-md duration-300 overflow-hidden lg:static lg:bg-transparent lg:min-h-fit lg:w-auto lg:ml-10 border-b-2">
           <ul class="flex flex-col lg:flex-row gap-10 lg:gap-14 font-primary font-semibold lg:font-bold">
             <li class="nav-link">
               <a href="#home" class="text-3xl hover:text-blue-400 lg:text-xl duration-300 ">Proizvodi</a>
@@ -32,11 +32,9 @@
           </ul>
         </div>
 
-        <main class="flex-60%">
-          <div class="mr-4 cursor-pointer lg:hidden z-50 duration-200">
-            <i id="burger" class="ri-menu-line text-2xl"></i>
-          </div>
-        </main>
+        <div class="mr-4 cursor-pointer lg:hidden z-51 duration-200">
+          <i id="burger" class="ri-menu-line text-2xl"></i>
+        </div>
       </nav>
     </header>
 
@@ -45,16 +43,28 @@
     <div class="container m-auto">{% block content %}{% endblock %}</div>
 
     <!-- Footer -->
-    <footer class="pt-10 pb-10 bg-primary relative flex-20%">
+    <footer class="pt-10 bg-primary relative flex-20% h-fit">
       <div>
-        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 0">
             <img src="/static/img/logo.png" alt="Logo" class="mb-3 w-32 md:w-36 lg:w-40" >
         </div>
-
-        <div class="text-center mt-10 md:mt-20">
-          <p class="text-slate-800">&copy; 2025 Naj...Naj Palacinkarnica</p>
-          <p class="text-slate-800">Lenjinova 1, Požarevac</p>
-          <p class="text-slate-800">Email: <a href="mailto:najnaj@gmail.com" class="text-white">najnaj@gmail.com</a></p>
+        <!-- Tekst -->
+        <div class="text-slate-800 text-center mt-10 lg:mt-20">
+          <p>&copy; 2025 Naj...Naj Palacinkarnica</p>
+          <p>Lenjinova 1, Požarevac</p>
+          <p>Email: <a href="mailto:najnaj@gmail.com" class="text-white">najnaj@gmail.com</a></p>
+        </div>
+    
+        <!-- Ikonice -->
+        <div class="absolute top-2 md:top-10 right-10 md:right-30">
+          <div class="flex flex-col gap-3 pr-2 items-center">
+            <p class="uppercase underline font-semibold">Zapratite nas:</p>
+            <div class="flex flex-col md:flex-row space-y-3 space-x-10">
+              <i class="ri-instagram-fill text-xl lg:text-4xl text-white hover:text-pink-500 duration-200 cursor cursor-pointer"></i>
+              <i class="ri-tiktok-fill text-xl lg:text-4xl text-white hover:text-black duration-200 cursor cursor-pointer"></i>
+              <i class="ri-facebook-fill text-xl lg:text-4xl text-white hover:text-blue-500 duration-200 cursor cursor-pointer"></i>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
