@@ -6,6 +6,7 @@
     <title>Naj...Naj Palacinkarnica | {% block title %}{% endblock %}</title>
     <!--TailwindCss-->
     <link rel="stylesheet" href="/static/css/output.css">
+    <link rel="shortcut icon" href="/static/img/logo.png">
     <!--Remix Icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />  </head>
   <body class="flex flex-col min-h-screen">
@@ -14,20 +15,20 @@
       <nav class="container m-auto flex items-center justify-between">
         <!--Logo-->
         <div>
-          <img src="/static/img/logo.png" alt="logo" class="w-24 my-2 mx-4">
+          <a href="{{url_for('home')}}"><img src="/static/img/logo.png" alt="logo" class="w-24 my-2 mx-4"></a>
         </div>
         <!--Links-->
         <div id="navmenu" class=" absolute top-0 left-[-100%]  flex justify-center items-center min-h-[80vh] gap-3 w-full
         bg-pink-500/60 backdrop-blur-md duration-300 overflow-hidden lg:static lg:bg-transparent lg:min-h-fit lg:w-auto lg:ml-10 border-b-2">
           <ul class="flex flex-col lg:flex-row gap-10 lg:gap-14 font-primary font-semibold lg:font-bold">
             <li class="nav-link">
-              <a href="#home" class="text-3xl hover:text-blue-400 lg:text-xl duration-300 ">Proizvodi</a>
+              <a href="{{url_for('menu')}}" class="text-3xl hover:text-blue-400 lg:text-xl duration-300 ">Proizvodi</a>
             </li>
             <li class="nav-link">
-              <a href="#about" class="text-3xl hover:text-blue-400 lg:text-xl duration-300">O nama</a>
+              <a href="{{url_for('about')}}" class="text-3xl hover:text-blue-400 lg:text-xl duration-300">O nama</a>
             </li>
             <li class="nav-link">
-              <a href="#contact" class="text-3xl hover:text-blue-400 lg:text-xl duration-300">Kontakt</a>
+              <a href="{{url_for('contact')}}" class="text-3xl hover:text-blue-400 lg:text-xl duration-300">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -40,7 +41,7 @@
 
     
       <!-- Main Content -->
-    <div class="container m-auto">{% block content %}{% endblock %}</div>
+    <div>{% block content %}{% endblock %}</div>
 
     <!-- Footer -->
     <footer class="pt-10 bg-primary relative flex-20% h-fit">
