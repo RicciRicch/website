@@ -8,7 +8,7 @@
 .alert-primary {
   --bs-btn-bg: #ff40ff;
   --bs-btn-border-color: #ff40ff;
-  --bs-btn-hover-bg: #ff40ff;
+  --bs-btn-hover-bg: hsl(300, 35%, 65%);
   --bs-btn-hover-border-color: #ff40ff;
 }
 
@@ -34,10 +34,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-}
-
-.container {
-  flex: 1; /* Ovim se glavni sadržaj širi, a footer ide na dno */
 }
 
 .carousel-img {

@@ -14,4 +14,17 @@ navLinks.forEach(item => {
     })
 })
 
+const ScrollHeader = () =>{
+    const header = document.getElementById('navbar')
+
+    if(this.scrollY >= 250){
+        header.classList.add('border-b', 'border-white')
+    }
+    else{
+        header.classList.remove('border-b', 'border-white')
+    }
+}
+
+window.addEventListener('scroll', ScrollHeader)
+
 
